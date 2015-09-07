@@ -1,0 +1,29 @@
+var AngleX : float = 0.0;
+var AngleY : float = 90.0;
+var AngleZ : float = 0.0;
+
+private var targetValue : float = 0.0;
+private var CurrentValue : float = 0.0;
+private var easing : float = 0.05;
+
+var Target : GameObject;
+
+var ranOnce : boolean = false;
+
+function Update (){
+	CurrentValue = CurrentValue + (targetValue - CurrentValue) * easing;
+	  
+	Target.transform.rotation = Quaternion.identity;
+	Target.transform.Rotate(0,CurrentValue,0);
+}
+
+function OnTriggerEnter (other : Collider)
+{
+	if (!ranOnce)
+	{
+		ranOnce = true;
+		targetValue = AngleY;
+		CurrentValue = 0; 
+	}
+
+}
