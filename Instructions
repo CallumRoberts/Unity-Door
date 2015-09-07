@@ -1,0 +1,8 @@
+1. Create a mesh of a door which you want to add into the game.
+2. A new object needs to be created, this will form your door hinge place this on the side of the door which you want to pivot.
+3. Make the door hinge the parent of the door.
+4. Add a box collider (this will make the tigger), make the the door the parent of the trigger.
+5. The size of the trigger needs to be changed depending on how for you want the player distance to be before it opens.
+6. Add the code to the trigger.
+7. the angle of how the door opens is down to your prefrence this can be edited by the variables Angle X, Y and Z.
+8. make the target your hinge object.
